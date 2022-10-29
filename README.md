@@ -43,7 +43,7 @@ and many many many more......
 ## Acknowledgements
 
  - [Passport.js] : (https://www.passportjs.org/)
- - [Google cloud console]:(https://console.cloud.google.com/
+ - [gcp] : (https://console.cloud.google.com/)
  
 
 ## Deployment
