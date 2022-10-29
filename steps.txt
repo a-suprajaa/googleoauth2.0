@@ -1,0 +1,38 @@
+firstly you should setup an application 
+     dependencies are express,cors,body-parser
+     nodemon(development stage)
+
+set up index.js and configure the server
+
+go to the google cloud platform and create a project
+(pic 1)
+
+inside the credentials click create credentials and create new oauth2.0 id
+   (so this id is basically for an app)
+   oauth client id request the consent of the user to have their data accessed by you app.
+next click on the type of application as web application
+configure your URIs and callback URI as well.
+
+then,you have a [client id,secret ] created for your app
+
+Now,visit the passport.js website
+(this website provides a lot of authentication strategy,what we will be using is the google oauth1.0 strategy)
+So,choose the strategy
+
+create a file(passport-setup.js)
+1)require passport
+2)install the passport-google-oauth20 package
+3)configure a google strategy(you can copy the code from their website)
+4)copy the client id ,secret,callback url from the cloud console.
+5)because we are not storing any details in a database just pass the success parameters only
+6)go back to index.js require the passport-setup file and set up auth routes (again available in the passprort website)
+7)configure the other routes for failure and successsful login
+
+8)dont forget the middlewar(here i have used cors,bodyparser,cookiesession)
+   (some versions of coookie-sessions are incompatible so you can use express sessions as well )
+
+9)configure one route for signout as well.(redirects to home page)
+
+
+Run the app using npm start
+
